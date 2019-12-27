@@ -194,7 +194,7 @@
        let clock = () =>{
            let date = new Date();
            let h = date.getHours();
-           let m = date.getMinutes();
+           let m = (date.getMinutes()<10? '0' :'')+date.getMinutes();
            let s = date.getSeconds();
            hour.style.transform = `rotate( ${h*30+90}deg)`;
            minute.style.transform = `rotate( ${m*6+90}deg)`;
